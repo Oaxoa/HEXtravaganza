@@ -1,0 +1,27 @@
+{
+  "name": "hextravaganza",
+  "version": "0.1.0",
+  "description": "HEXtravaganza is a utility library to interpret a new extended hexadecimal color notation, eventually converting colors to rgba",
+  "main": "dist/hextragavanza.min.js",
+  "scripts": {
+    "test": "tape test/HEXtravaganza.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oaxoa/HEXtravaganza.git"
+  },
+  "keywords": [
+    "color", "colors", "color management", "color notation", "color transform", "hex", "hex2rgba", "hextravaganza", "hexadecimal"
+  ],
+  "author": "Pierluigi Pesenti <info@oaxoa.com> (http://www.oaxoa.com)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint": "^2.13.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "tape": "^4.6.0"
+  },
+  "dependencies": {
+    "jquery": "^1.8.0"
+  }
+}
