@@ -90,10 +90,25 @@
 		 */
 		function toTransformedColor(cc) {
 			if(cc.alpha===1) {
-				return '#'+cc.color;
+				return toHexOptimizedColor(cc.color);
 			} else {
 				return toRGBString(cc.color, cc.alpha);
 			}
+		}
+		function toHexOptimizedColor(color) {
+			var out;
+			if(color.length===3) {
+				out='#'+color;
+			} else if(color.length===6) {
+				var colorChars=color.split('');
+
+				if(colorChars[0]===colorChars[1] && colorChars[2]===colorChars[3] && colorChars[4]===colorChars[5]) {
+					out='#'+colorChars[0]+colorChars[2]+colorChars[4];
+				} else {
+					out='#'+color;
+				}
+			}
+			return out;
 		}
 		/**
 		 * Separate the color string and the alpha into an object with four properties (r, g, b, a)
@@ -134,7 +149,7 @@
 			var o=toRGBA(hex, alpha);
 			return 'rgba('+o.r+','+o.g+','+o.b+','+o.a+')';
 		}
-		
+
 		// PUBLIC API
 		
 		return {
