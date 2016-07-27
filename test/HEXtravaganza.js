@@ -39,12 +39,14 @@ test('Color conversion', function (t) {
 	t.equal(HEXtravaganza.parse('#10333'), 'rgba(51,51,51,0.06)');
 	t.equal(HEXtravaganza.parse('#80333'), 'rgba(51,51,51,0.5)');
 	t.equal(HEXtravaganza.parse('#FF333'), '#333');
-	t.equal(HEXtravaganza.parse('#333333'), '#333333');
+	t.equal(HEXtravaganza.parse('#333333'), '#333');
+	t.equal(HEXtravaganza.parse('#303030'), '#303030');
 
 	t.equal(HEXtravaganza.parse('#0333333'), 'rgba(51,51,51,0)');
 	t.equal(HEXtravaganza.parse('#1333333'), 'rgba(51,51,51,0.06)');
 	t.equal(HEXtravaganza.parse('#2333333'), 'rgba(51,51,51,0.13)');
-	t.equal(HEXtravaganza.parse('#F333333'), '#333333');
+	t.equal(HEXtravaganza.parse('#F333333'), '#333');
+	t.equal(HEXtravaganza.parse('#F303030'), '#303030');
 
 
 	t.equal(HEXtravaganza.parse('#00333333'), 'rgba(51,51,51,0)');
@@ -53,6 +55,7 @@ test('Color conversion', function (t) {
 	t.equal(HEXtravaganza.parse('#06333333'), 'rgba(51,51,51,0.02)');
 	t.equal(HEXtravaganza.parse('#10333333'), 'rgba(51,51,51,0.06)');
 	t.equal(HEXtravaganza.parse('#80333333'), 'rgba(51,51,51,0.5)');
-	t.equal(HEXtravaganza.parse('#FF333333'), '#333333');
+	t.equal(HEXtravaganza.parse('#FF333333'), '#333');
+	t.equal(HEXtravaganza.parse('#FF303030'), '#303030');
 	t.end();
 });
